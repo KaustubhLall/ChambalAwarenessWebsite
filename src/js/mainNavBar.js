@@ -20,11 +20,11 @@ class MainNav extends React.Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link onClick={() => this.redirectTo('/home')}>Home</Nav.Link>
 
-                        <Nav.Link href="#link">Members</Nav.Link>
+                        <Nav.Link onClick={() => this.redirectTo('/members')}>Members</Nav.Link>
 
-                        <Nav.Link href="#link">Gallery</Nav.Link>
+                        <Nav.Link onClick={() => this.redirectTo('/gallery')}>Gallery</Nav.Link>
 
 
                         <NavDropdown title="Chambal River" id="basic-nav-dropdown">
@@ -36,8 +36,8 @@ class MainNav extends React.Component {
                             <NavDropdown.Item href="#action/3.6">Competitions/Events</NavDropdown.Item>
                         </NavDropdown>
 
-                        <Nav.Link href="#link">Contact Us</Nav.Link>
-                        <Nav.Link href="#link">FAQ</Nav.Link>
+                        <Nav.Link onClick={() => this.redirectTo('/contact')}>Contact Us</Nav.Link>
+                        <Nav.Link onClick={() => this.redirectTo('/faq')}>FAQ</Nav.Link>
 
 
                     </Nav>
@@ -47,6 +47,10 @@ class MainNav extends React.Component {
 
         return (elem);
     }
+
+    redirectTo = (page) => {
+        this.props.history.push(page)
+    };
 }
 
 export default MainNav;
