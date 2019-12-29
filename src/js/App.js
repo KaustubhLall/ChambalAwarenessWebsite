@@ -10,11 +10,9 @@ import Col from "react-bootstrap/Col";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import ListGroupItem from "react-bootstrap/ListGroupItem";
 import CardGroup from "react-bootstrap/CardGroup";
-
+import CardDeck from "react-bootstrap/CardDeck";
+import * as ad from '../static/ad.PNG'
 /**
  * Main page code lives here.
  */
@@ -46,7 +44,10 @@ class App extends React.Component {
                     {/*first row element is the image*/}
                     <Row fluid={true}>
                         <Col fluid={true}>
-                            <Image src={contents.mainPage.topImage} fluid={true}/>
+                            <Image src={contents.mainPage.topImage} fluid={true}
+                                   style={{
+                                       "height": '400px', "width": "1400px"
+                                   }}/>
                         </Col>
                     </Row>
 
@@ -65,12 +66,12 @@ class App extends React.Component {
                                     </ButtonGroup>
                                 </p>
                                 <Row className={'justify-content-md-center'}>
-                                    <Col className={'debug'} fluid><Image src={contents.mainPage.firstImageRowSrc[0]}
-                                                                          fluid/></Col>
-                                    <Col className={'debug'} fluid><Image src={contents.mainPage.firstImageRowSrc[1]}
-                                                                          fluid/></Col>
-                                    <Col className={'debug'} fluid><Image src={contents.mainPage.firstImageRowSrc[2]}
-                                                                          fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]}
+                                                      fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]}
+                                                      fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]}
+                                                      fluid/></Col>
                                 </Row>
                             </Jumbotron>
                         </Col>
@@ -80,6 +81,11 @@ class App extends React.Component {
                         <Col>{this.getAnnouncements()}</Col>
                     </Row>
 
+                    <Row fluid={true}>
+                        <Col fluid={true}>
+                            <Image src={ad} fluid={true} style={{"height": '40px', "width": "1400px"}}/>
+                        </Col>
+                    </Row>
 
                 </Container>
             </div>
@@ -88,11 +94,11 @@ class App extends React.Component {
 
     getAnnouncements = () => {
         return (
-            <CardGroup>
+            <CardDeck styel={{'align-content': 'center'}}>
                 {contents.mainPage.announcement_1}
-                {contents.mainPage.announcement_1}
-                {contents.mainPage.announcement_1}
-            </CardGroup>
+                {contents.mainPage.announcement_2}
+                {contents.mainPage.announcement_3}
+            </CardDeck>
         )
     }
 
