@@ -2,6 +2,7 @@ import {loremIpsum} from "lorem-ipsum";
 import React from 'react';
 import Card from "react-bootstrap/Card";
 import * as ad from '../static/ad.PNG'
+import Popover from "bootstrap/js/src/popover";
 
 const contents = {
     title: 'IntachKota',
@@ -60,7 +61,9 @@ const contents = {
                     <small className="text-muted">RP Bhatnagar</small>
                 </Card.Footer>
             </Card>
-        )
+        ),
+
+
     },
 
     FAQPage: {},

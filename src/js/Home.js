@@ -13,6 +13,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import CardDeck from "react-bootstrap/CardDeck";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import Popover from "bootstrap/js/src/popover";
 
 /**
  * Main page code lives here.
@@ -60,26 +61,21 @@ class Home extends React.Component {
                                 <p>{contents.mainPage.missionStatement}</p>
                                 <p>
                                     <ButtonGroup>
-
-                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
-                                                        overlay={this.tooltipFactsZone}>
-                                            <Button variant="primary">Facts Zone</Button>
-
+                                        <OverlayTrigger trigger="click" placement="right" overlay={this.infoFacts}>
+                                        <Button onClick={this.infoFacts} variant="primary">Facts Zone</Button>
                                         </OverlayTrigger>
 
-                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
-                                                        overlay={this.tooltipMission}>
-                                            <Button variant="success">Join Our Mission</Button>
-                                        </OverlayTrigger>
-
-                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
-                                                        overlay={this.tooltipChambalCommittee}>
-                                            <Button variant="info">The Chambal Committee</Button>
-                                        </OverlayTrigger>
+                                        <Button onClick={this.infoMission} variant="success">Join Our Mission</Button>
+                                        <Button onClick={this.infoCommittee} variant="info">The Chambal
+                                            Committee</Button>
                                     </ButtonGroup>
                                 </p>
                                 <Row className={'justify-content-md-center'}>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/>
+                                        <p>
+
+                                        </p>
+                                    </Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
                                 </Row>
@@ -93,7 +89,8 @@ class Home extends React.Component {
 
                     <Row fluid={true}>
                         <Col fluid={true}>
-                            <Image src={contents.mainPage.ad} fluid={true} style={{"height": '100px', "width": "1400px"}}/>
+                            <Image src={contents.mainPage.ad} fluid={true}
+                                   style={{"height": '100px', "width": "1400px"}}/>
                         </Col>
                     </Row>
 
@@ -112,22 +109,24 @@ class Home extends React.Component {
         )
     };
 
-    tooltipFactsZone = (props) => {
-        return <Tooltip {...props}>
-            <ul>
-                <li>p1</li>
-                <li>p2</li>
-                <li>p3</li>
-                <li>p4</li>
-            </ul>
-        </Tooltip>;
+    infoFacts = () => {
+        return <div>
+            <Popover id="popover-basic">
+                <Popover.Title as="h3">Facts about Chambal</Popover.Title>
+                <Popover.Content>
+                    And here's some <strong>amazing</strong> content. It's very engaging.
+                    right?
+                </Popover.Content>
+            </Popover>
+        </div>
+
     };
 
-    tooltipMission = (props) => {
+    infoMission = (props) => {
         return <Tooltip {...props}>Simple tooltip</Tooltip>;
     };
 
-    tooltipChambalCommittee = (props) => {
+    infoCommittee = (props) => {
         return <Tooltip {...props}>Simple tooltip</Tooltip>;
     };
 }
