@@ -5,7 +5,11 @@ import MainNav from "./mainNavBar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
+import 'holderjs'
 
+/**
+ * Main page code lives here.
+ */
 class App extends React.Component {
 
     constructor(props) {
@@ -27,10 +31,10 @@ class App extends React.Component {
             <div className="App">
                 <MainNav/>
 
-                <Container>
+                <Container >
                     {/*first row element is the image*/}
-                    <Row>
-                        <Image src={"holder.js/Main-Image"} fluid/>
+                    <Row style={{'width': '100%'}}>
+                        <Image src={"holder.js/800x600"} fluid={true}/>
                     </Row>
 
                 </Container>
