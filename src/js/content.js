@@ -119,7 +119,28 @@ const contents = {
         images: [
             {
                 src: "https://picsum.photos/1400/400",
-                desc: '',
+                desc: loremIpsum({count: 3}),
+                title: loremIpsum()
+            },
+            {
+                src: "https://picsum.photos/1400/400",
+                desc: loremIpsum({count: 3}),
+                title: loremIpsum()
+            },
+            {
+                src: "https://picsum.photos/1400/400",
+                desc: loremIpsum({count: 3}),
+                title: loremIpsum()
+            },
+            {
+                src: "https://picsum.photos/1400/400",
+                desc: loremIpsum({count: 3}),
+                title: loremIpsum()
+            },
+            {
+                src: "https://picsum.photos/1400/400",
+                desc: loremIpsum({count: 3}),
+                title: loremIpsum()
             },
         ],
 
