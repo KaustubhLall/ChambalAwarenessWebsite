@@ -15,8 +15,8 @@ class MainNav extends React.Component {
 
     render() {
         const elem = (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Chambal Committee Kota</Navbar.Brand>
+            <Navbar bg="light" expand="lg" fixed={'top'}>
+                <Navbar.Brand href={'/home'}>Chambal Committee Kota</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

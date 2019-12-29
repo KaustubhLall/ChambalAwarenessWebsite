@@ -11,7 +11,8 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import CardDeck from "react-bootstrap/CardDeck";
-import * as ad from '../static/ad.PNG'
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 
 /**
  * Main page code lives here.
@@ -44,7 +45,7 @@ class Home extends React.Component {
                     {/*first row element is the image*/}
                     <Row fluid={true}>
                         <Col fluid={true}>
-                            <Image src={contents.mainPage.topImage} fluid={true}
+                            <Image src={contents.mainPage.topImage} fluid rounded
                                    style={{
                                        "height": '400px', "width": "1400px"
                                    }}/>
@@ -59,19 +60,28 @@ class Home extends React.Component {
                                 <p>{contents.mainPage.missionStatement}</p>
                                 <p>
                                     <ButtonGroup>
-                                        <Button variant="primary">Facts Zone</Button>
-                                        <Button variant="success">Join Our Mission</Button>
-                                        <Button variant="info">The Chambal Committee</Button>
 
+                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
+                                                        overlay={this.tooltipFactsZone}>
+                                            <Button variant="primary">Facts Zone</Button>
+
+                                        </OverlayTrigger>
+
+                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
+                                                        overlay={this.tooltipMission}>
+                                            <Button variant="success">Join Our Mission</Button>
+                                        </OverlayTrigger>
+
+                                        <OverlayTrigger placement="down" delay={{show: 250, hide: 400}}
+                                                        overlay={this.tooltipChambalCommittee}>
+                                            <Button variant="info">The Chambal Committee</Button>
+                                        </OverlayTrigger>
                                     </ButtonGroup>
                                 </p>
                                 <Row className={'justify-content-md-center'}>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]}
-                                                      fluid/></Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]}
-                                                      fluid/></Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]}
-                                                      fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
                                 </Row>
                             </Jumbotron>
                         </Col>
@@ -83,7 +93,7 @@ class Home extends React.Component {
 
                     <Row fluid={true}>
                         <Col fluid={true}>
-                            <Image src={ad} fluid={true} style={{"height": '100px', "width": "1400px"}}/>
+                            <Image src={contents.mainPage.ad} fluid={true} style={{"height": '100px', "width": "1400px"}}/>
                         </Col>
                     </Row>
 
@@ -100,9 +110,26 @@ class Home extends React.Component {
                 {contents.mainPage.announcement_3}
             </CardDeck>
         )
-    }
+    };
 
+    tooltipFactsZone = (props) => {
+        return <Tooltip {...props}>
+            <ul>
+                <li>p1</li>
+                <li>p2</li>
+                <li>p3</li>
+                <li>p4</li>
+            </ul>
+        </Tooltip>;
+    };
 
+    tooltipMission = (props) => {
+        return <Tooltip {...props}>Simple tooltip</Tooltip>;
+    };
+
+    tooltipChambalCommittee = (props) => {
+        return <Tooltip {...props}>Simple tooltip</Tooltip>;
+    };
 }
 
 

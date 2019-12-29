@@ -1,17 +1,19 @@
 import {loremIpsum} from "lorem-ipsum";
 import React from 'react';
 import Card from "react-bootstrap/Card";
+import * as ad from '../static/ad.PNG'
 
 const contents = {
     title: 'IntachKota',
     favicon_logo_src: "holder.js/30x30",
 
     mainPage: {
-        topImage: "https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/05/26/Pictures/_0c2ac29a-7f61-11e9-98c6-ecfd32845dee.jpg",
+        topImage: "https://picsum.photos/1400/400",
         missionStatement: 'Our mission is Jal Shakti, arising out of chambal river in Hadoti Region, Kota city.',
         firstImageRowSrc:
             ["https://picsum.photos/400", "https://picsum.photos/400",
                 "https://picsum.photos/400"],
+        ad: ad,
         announcement_1: (
             <Card style={{width: '18rem'}}>
                 <Card.Header>Intach Kota - A Brief Review </Card.Header>
