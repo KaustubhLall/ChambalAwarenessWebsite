@@ -5,13 +5,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 class MainNav extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        // hand down props to current state
-        this.setState(props);
-    }
-
 
     render() {
         const elem = (

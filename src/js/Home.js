@@ -13,20 +13,12 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import CardDeck from "react-bootstrap/CardDeck";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import Popover from "bootstrap/js/src/popover";
 
 /**
  * Main page code lives here.
  */
 class Home extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.setState(props);
-
-
-    }
 
     /**
      * 1. This function sets the title of the application.
@@ -42,10 +34,10 @@ class Home extends React.Component {
                 <MainNav {...this.props}/>
 
 
-                <Container fluid={true}>
+                <Container fluid>
                     {/*first row element is the image*/}
-                    <Row fluid={true}>
-                        <Col fluid={true}>
+                    <Row fluid>
+                        <Col fluid>
                             <Image src={contents.mainPage.topImage} fluid rounded
                                    style={{
                                        "height": '400px', "width": "1400px"
@@ -54,28 +46,31 @@ class Home extends React.Component {
                     </Row>
 
                     {/*second row element are the next three images*/}
-                    <Row className={'justify-content-md-center'} fluid={true}>
+                    <Row className={'justify-content-md-center'} fluid>
                         <Col>
-                            <Jumbotron fluid={true}>
+                            <Jumbotron fluid>
                                 <h1>Our Mission</h1>
                                 <p>{contents.mainPage.missionStatement}</p>
                                 <p>
                                     <ButtonGroup>
-                                        <OverlayTrigger trigger="click" placement="right" overlay={this.infoFacts}>
-                                        <Button onClick={this.infoFacts} variant="primary">Facts Zone</Button>
+                                        <OverlayTrigger trigger="click" placement="bottom"
+                                                        overlay={contents.mainPage.facts}>
+                                            <Button variant="primary">Facts Zone</Button>
                                         </OverlayTrigger>
 
-                                        <Button onClick={this.infoMission} variant="success">Join Our Mission</Button>
-                                        <Button onClick={this.infoCommittee} variant="info">The Chambal
-                                            Committee</Button>
+                                        <OverlayTrigger trigger="click" placement="bottom"
+                                                        overlay={contents.mainPage.mission}>
+                                            <Button variant="success">Join Our Mission</Button>
+                                        </OverlayTrigger>
+
+                                        <OverlayTrigger trigger="click" placement="bottom"
+                                                        overlay={contents.mainPage.committee}>
+                                            <Button variant="info">The Chambal Committee</Button>
+                                        </OverlayTrigger>
                                     </ButtonGroup>
                                 </p>
                                 <Row className={'justify-content-md-center'}>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/>
-                                        <p>
-
-                                        </p>
-                                    </Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
                                 </Row>
@@ -87,9 +82,9 @@ class Home extends React.Component {
                         <Col>{this.getAnnouncements()}</Col>
                     </Row>
 
-                    <Row fluid={true}>
-                        <Col fluid={true}>
-                            <Image src={contents.mainPage.ad} fluid={true}
+                    <Row fluid>
+                        <Col fluid>
+                            <Image src={contents.mainPage.ad} fluid
                                    style={{"height": '100px', "width": "1400px"}}/>
                         </Col>
                     </Row>
@@ -109,26 +104,7 @@ class Home extends React.Component {
         )
     };
 
-    infoFacts = () => {
-        return <div>
-            <Popover id="popover-basic">
-                <Popover.Title as="h3">Facts about Chambal</Popover.Title>
-                <Popover.Content>
-                    And here's some <strong>amazing</strong> content. It's very engaging.
-                    right?
-                </Popover.Content>
-            </Popover>
-        </div>
 
-    };
-
-    infoMission = (props) => {
-        return <Tooltip {...props}>Simple tooltip</Tooltip>;
-    };
-
-    infoCommittee = (props) => {
-        return <Tooltip {...props}>Simple tooltip</Tooltip>;
-    };
 }
 
 
