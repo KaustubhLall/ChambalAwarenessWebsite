@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import MainNav from "./mainNavBar";
 import Carousel from "react-bootstrap/Carousel";
 import contents from "./content";
@@ -8,34 +8,21 @@ class Gallery extends React.Component {
 
 
     render() {
+
         return (
             <div>
                 <MainNav {...this.props}/>
 
-                {this.ControlledCarousel()}
+                <Carousel>
+                    {contents.GalleryPage.images.map(this.createItem)}
+                </Carousel>
             </div>
         );
     }
 
-    ControlledCarousel = () => {
-        const [index, setIndex] = useState(0);
-        const [direction, setDirection] = useState(null);
-
-        const handleSelect = (selectedIndex, e) => {
-            setIndex(selectedIndex);
-            setDirection(e.direction);
-        };
-
-        return (
-            <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}>
-                {contents.GalleryPage.images.map(this.createItem)}
-            </Carousel>
-        );
-    };
-
     createItem = (source) => {
         return (
-            <Carousel.Item>
+            <Carousel.Item key={source.title}>
                 <img
                     className="d-block w-100"
                     src={source.src}
