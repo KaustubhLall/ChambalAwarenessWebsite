@@ -1,6 +1,5 @@
 import {loremIpsum} from "lorem-ipsum";
 import React from 'react';
-import Card from "react-bootstrap/Card";
 import * as ad from '../static/ad.PNG'
 import Popover from "react-bootstrap/Popover";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -17,54 +16,41 @@ const contents = {
             ["https://picsum.photos/400", "https://picsum.photos/400",
                 "https://picsum.photos/400"],
         ad: ad,
-        announcement_1: (
-            <Card style={{width: '18rem'}}>
-                <Card.Header>Intach Kota - A Brief Review </Card.Header>
-                <Card.Body>
-                    <Card.Title>Post Earth Day</Card.Title>
-                    <Card.Text>
-                        {loremIpsum({count: 3})}
-                    </Card.Text>
-                </Card.Body>
+        annoucements: [
+            {
+                title: 'River Issues',
+                content: '',
+            },
+            {
+                title: 'MSWM Condunrum',
+                content: '',
+            },
+            {
+                title: 'Biodiversity',
+                content: '',
+            },
+            {
+                title: 'Tour Packages',
+                content: '',
+            },
+            {
+                title: 'Self Employment Program',
+                content: '',
+            },
+            {
+                title: 'Yearly Awards and Events',
+                content: '',
+            },
+            {
+                title: 'SMART Heritage',
+                content: '',
+            },
+            {
+                title: 'CSR Pitch Decking',
+                content: '',
+            },
 
-                <Card.Footer>
-                    <small className="text-muted">RP Bhatnagar</small>
-                </Card.Footer>
-            </Card>
-        ),
-
-        announcement_2: (
-            <Card style={{width: '18rem'}}>
-                <Card.Header>Our Mission - Reviewing Chambal River </Card.Header>
-                <Card.Body>
-                    <Card.Title>Awareness Creation in Society</Card.Title>
-                    <Card.Text>
-                        {loremIpsum({count: 3})}
-                    </Card.Text>
-                </Card.Body>
-
-                <Card.Footer>
-                    <small className="text-muted">RP Bhatnagar</small>
-                </Card.Footer>
-            </Card>
-        ),
-
-        announcement_3: (
-            <Card style={{width: '18rem'}}>
-                <Card.Header>Our Motivation - Jivit Nadi Organization</Card.Header>
-                <Card.Body>
-                    <Card.Title>Post Earth Day</Card.Title>
-                    <Card.Text>
-                        {loremIpsum({count: 3})}
-                    </Card.Text>
-                </Card.Body>
-
-                <Card.Footer>
-                    <small className="text-muted">RP Bhatnagar</small>
-                </Card.Footer>
-            </Card>
-        ),
-
+        ],
         facts: (
             <Popover id="popover-basic" style={{'max-width': '400px'}}>
                 <Popover.Title as="h3">{'Facts about Chambal'}</Popover.Title>

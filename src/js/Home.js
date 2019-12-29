@@ -10,9 +10,9 @@ import Col from "react-bootstrap/Col";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import CardDeck from "react-bootstrap/CardDeck";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
+import CardColumns from "react-bootstrap/CardColumns";
+import Card from "react-bootstrap/Card";
 
 /**
  * Main page code lives here.
@@ -69,11 +69,12 @@ class Home extends React.Component {
                                         </OverlayTrigger>
                                     </ButtonGroup>
                                 </p>
-                                <Row className={'justify-content-md-center'}>
+                                <Row className={'justify-content-md-center'} fluid>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
                                 </Row>
+
                             </Jumbotron>
                         </Col>
                     </Row>
@@ -96,13 +97,23 @@ class Home extends React.Component {
 
     getAnnouncements = () => {
         return (
-            <CardDeck styel={{'align-content': 'center'}}>
-                {contents.mainPage.announcement_1}
-                {contents.mainPage.announcement_2}
-                {contents.mainPage.announcement_3}
-            </CardDeck>
+            <CardColumns styel={{'align-content': 'center'}}>
+                {contents.mainPage.annoucements.map(this.make_card)}
+            </CardColumns>
         )
     };
+
+    make_card = (data) => {
+        console.log('make card called with args ' + JSON.stringify(data));
+        return (
+            <Card style={{width: '18rem'}} className={'text-center'}>
+                <Card.Header> {data.title} </Card.Header>
+                <Card.Body>
+                    {data.content}
+                </Card.Body>
+            </Card>
+        );
+    }
 
 
 }
