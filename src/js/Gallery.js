@@ -16,17 +16,20 @@ class Gallery extends React.Component {
                 <Carousel>
                     {contents.GalleryPage.images.map(this.createItem)}
                 </Carousel>
+
             </div>
         );
     }
 
     createItem = (source) => {
         return (
-            <Carousel.Item key={source.title}>
+            <Carousel.Item key={source.title} fluid>
                 <img
                     className="d-block w-100"
                     src={source.src}
                     alt="Carousel"
+                    height={800}
+                    width={1400}
                 />
                 <Carousel.Caption>
                     <h3>{source.title}</h3>

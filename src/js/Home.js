@@ -53,17 +53,17 @@ class Home extends React.Component {
                                 <p>{contents.mainPage.missionStatement}</p>
                                 <p>
                                     <ButtonGroup>
-                                        <OverlayTrigger trigger="hover" placement="bottom"
+                                        <OverlayTrigger trigger="focus" placement="bottom"
                                                         overlay={contents.mainPage.facts}>
                                             <Button variant="primary">Facts Zone</Button>
                                         </OverlayTrigger>
 
-                                        <OverlayTrigger trigger="hover" placement="bottom"
+                                        <OverlayTrigger trigger="focus" placement="bottom"
                                                         overlay={contents.mainPage.mission}>
                                             <Button variant="success">Join Our Mission</Button>
                                         </OverlayTrigger>
 
-                                        <OverlayTrigger trigger="hover" placement="bottom"
+                                        <OverlayTrigger trigger="focus" placement="bottom"
                                                         overlay={contents.mainPage.committee}>
                                             <Button variant="info">The Chambal Committee</Button>
                                         </OverlayTrigger>

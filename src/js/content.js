@@ -3,6 +3,8 @@ import React from 'react';
 import Card from "react-bootstrap/Card";
 import * as ad from '../static/ad.PNG'
 import Popover from "react-bootstrap/Popover";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Button from "react-bootstrap/Button";
 
 const contents = {
     title: 'IntachKota',
@@ -64,7 +66,7 @@ const contents = {
         ),
 
         facts: (
-            <Popover id="popover-basic">
+            <Popover id="popover-basic" style={{'max-width': '400px'}}>
                 <Popover.Title as="h3">{'Facts about Chambal'}</Popover.Title>
                 <Popover.Content>
                     The Chambal is the chief tributary of the Yamuna River and rises in the Vindhya Range just south of
@@ -85,7 +87,7 @@ const contents = {
         ),
 
         mission: (
-            <Popover id="popover-basic">
+            <Popover id="popover-basic" style={{'max-width': '400px'}}>
                 <Popover.Title as="h3">Our Mission</Popover.Title>
                 <Popover.Content>
                     The Chambal committee is a voluntary organization of citizes of Kota. It is a part of the Kota
@@ -101,11 +103,30 @@ const contents = {
         ),
 
         committee: (
-            <Popover id="popover-basic">
+            <Popover id="popover-basic" style={{'max-width': '600px'}}>
                 <Popover.Title as="h3">Our People</Popover.Title>
                 <Popover.Content>
-                    And here's some <strong>amazing</strong> content. It's very engaging.
-                    right?
+                    <ButtonGroup vertical>
+                        <Button variant='link' size='sm' href={'mailto:vibhabhatnagar1943@gmail.com'}> Bhat Vibha (RPB) 997-1798-5686 </Button>
+                        <Button variant='link' size='sm' href={'mailto:vivekjain_taxperts@yahoo.in'}> Jain P. C. (Advocate) 941-418-5600</Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> ChmblSena GopalSharma 91 9829089464</Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Hem Lata Gandhi(Susan) 9 9413240629</Button>
+                        <Button variant='link' size='sm' href={'mailto:kuldeep.lbsgroup@gmail.com'}> Mathur Kuldeep(LBS) 91 9829253001 </Button>
+                        <Button variant='link' size='sm' href={'mailto:sethinikhilesh@gmail.com'}> NikhileshSethi 91 9829035650 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Prof. G. S. Bhatnagar 91 9829047737 </Button>
+                        <Button variant='link' size='sm' href={'mailto:trea.grmes@gmail.com'}> RearAdmiral(Retd )Vineet Bakshi 91 9823257000 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> SaxenaArun(IIT)BOMBAY 91 8369936626 </Button>
+                        <Button variant='link' size='sm' href={'mailto:victoriaksingh@googlemail.com'}> Singh Victoria (Dhakarkheri) 91 9829036384 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Srivastva J. N. (Historian)919461294580 </Button>
+                        <Button variant='link' size='sm' href={'mailto:Tarumeetsingh@gmail.com'}> Tarumeet Singh Bedi 919828138333</Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> A. H. Zaidi +91 98291 62271</Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Krishendra Sg. Nama +91 94131 29603 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Manu Bhatnagar (NHD) +91 98100 36461 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Dr. PrahladDubey +91 92516 09368 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> BrijeshVijayvargiya-Press +91 94142 57341 </Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> SarveshwariRaniwala +91 94141 79858</Button>
+                        <Button variant='link' size='sm' href={'mailto:blank'}> Dr SushmaAhuja +91 99280 74780 </Button>
+                    </ButtonGroup>
                 </Popover.Content>
             </Popover>
         ),
@@ -118,27 +139,27 @@ const contents = {
     GalleryPage: {
         images: [
             {
-                src: "https://picsum.photos/1400/400",
+                src: "https://picsum.photos/1400/800",
                 desc: loremIpsum({count: 3}),
                 title: loremIpsum()
             },
             {
-                src: "https://picsum.photos/1400/400",
+                src: "https://picsum.photos/1400/800",
                 desc: loremIpsum({count: 3}),
                 title: loremIpsum()
             },
             {
-                src: "https://picsum.photos/1400/400",
+                src: "https://picsum.photos/1400/800",
                 desc: loremIpsum({count: 3}),
                 title: loremIpsum()
             },
             {
-                src: "https://picsum.photos/1400/400",
+                src: "https://picsum.photos/1400/800",
                 desc: loremIpsum({count: 3}),
                 title: loremIpsum()
             },
             {
-                src: "https://picsum.photos/1400/400",
+                src: "https://picsum.photos/1400/800",
                 desc: loremIpsum({count: 3}),
                 title: loremIpsum()
             },
