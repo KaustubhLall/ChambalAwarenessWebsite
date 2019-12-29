@@ -106,7 +106,7 @@ class Home extends React.Component {
     make_card = (data) => {
         console.log('make card called with args ' + JSON.stringify(data));
         return (
-            <Card style={{width: '18rem'}} className={'text-center'}>
+            <Card  className={'text-center'} fluid>
                 <Card.Header> {data.title} </Card.Header>
                 <Card.Body>
                     {data.content}

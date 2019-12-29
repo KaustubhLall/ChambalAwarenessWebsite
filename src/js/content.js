@@ -4,6 +4,8 @@ import * as ad from '../static/ad.PNG'
 import Popover from "react-bootstrap/Popover";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
 
 const contents = {
     title: 'IntachKota',
@@ -19,35 +21,75 @@ const contents = {
         annoucements: [
             {
                 title: 'River Issues',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Negative factor of Chambal ecosystem</ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'MSWM Condunrum',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'Biodiversity',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'Tour Packages',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'Self Employment Program',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'Yearly Awards and Events',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'SMART Heritage',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
             {
                 title: 'CSR Pitch Decking',
-                content: '',
+                content: (
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem></ListGroupItem>
+                        <ListGroupItem></ListGroupItem>
+                    </ListGroup>
+                ),
             },
 
         ],
