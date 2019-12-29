@@ -1,7 +1,10 @@
 import React from 'react';
 import '../css/App.css';
-import mainNav from './navbar'
 import contents from "./content";
+import MainNav from "./mainNavBar";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 
 class App extends React.Component {
 
@@ -22,14 +25,15 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <head>
-                </head>
+                <MainNav/>
 
-                <body>
-                <mainNav {...this.props}/>
+                <Container>
+                    {/*first row element is the image*/}
+                    <Row>
+                        <Image src={"holder.js/Main-Image"} fluid/>
+                    </Row>
 
-
-                </body>
+                </Container>
             </div>
         );
     }
