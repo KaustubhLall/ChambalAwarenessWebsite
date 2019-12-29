@@ -88,8 +88,13 @@ const contents = {
             <Popover id="popover-basic">
                 <Popover.Title as="h3">Our Mission</Popover.Title>
                 <Popover.Content>
-                    And here's some <strong>amazing</strong> content. It's very engaging.
-                    right?
+                    The Chambal committee is a voluntary organization of citizes of Kota. It is a part of the Kota
+                    chapter of INTACH. It is working on preserving the quality of river Chambal and aims to address
+                    negative factors which impact the Chambal ecosystem. It is also addressing the issues of groundwater
+                    pollution viz incesticides, pollutants etc. which affect the quality of water through the 14 waste
+                    water drains falling into the river within the city of Kota. The growth of population along the
+                    river has its own impact on damaging the natural flora and fauna of the river ecosystem leading to
+                    detirioration of river ecosystem and soil erosion.
                 </Popover.Content>
             </Popover>
 
@@ -113,7 +118,7 @@ const contents = {
     GalleryPage: {
         images: [
             {
-                src: '',
+                src: "https://picsum.photos/1400/400",
                 desc: '',
             },
         ],

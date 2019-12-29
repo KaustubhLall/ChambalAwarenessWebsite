@@ -17,8 +17,6 @@ function App() {
                 <Route exact path="/faq" component={FAQ}/>
                 <Route exact path="/members" component={Members}/>
                 <Route exact path="/contact" component={Contact}/>
-                {/*<Route exact path="/" component={}/>*/}
-                {/*<Route exact path="/" component={}/>*/}
             </div>
         </Router>
     );
