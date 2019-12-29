@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import 'holderjs'
+import Col from "react-bootstrap/Col";
 
 /**
  * Main page code lives here.
@@ -31,10 +32,16 @@ class App extends React.Component {
             <div className="App">
                 <MainNav/>
 
-                <Container >
+                <div className={'max-width-container'}>
+                    <Image src={contents.mainPage.firstImageSrc} fluid={true}/>
+                </div>
+
+                <Container className={'main-container'}>
                     {/*first row element is the image*/}
-                    <Row style={{'width': '100%'}}>
-                        <Image src={"holder.js/800x600"} fluid={true}/>
+                    <Row className={'top-image'}>
+                        <Col><Image /></Col>
+                        <Col><Image /></Col>
+                        <Col><Image /></Col>
                     </Row>
 
                 </Container>

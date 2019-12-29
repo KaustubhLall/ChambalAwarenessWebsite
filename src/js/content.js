@@ -1,9 +1,10 @@
 const contents = {
     title:'IntachKota',
-    favicon_logo_src : 'none',
+    favicon_logo_src : "holder.js/30x30",
 
     mainPage: {
-        firstImageSrc: 'none',
+        firstImageSrc: "holder.js/800x400",
+        firstImageRowSrc: ["holder.js/400x400", "holder.js/400x400", "holder.js/400x400"],
     }
 };
 
