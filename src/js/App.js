@@ -13,10 +13,10 @@ function App() {
             <div className="App">
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/home" component={Home}/>
-                <Route exact path="/gallery" component={Gallery}/>
+                {/*<Route exact path="/gallery" component={Gallery}/>*/}
                 <Route exact path="/faq" component={FAQ}/>
                 <Route exact path="/members" component={Members}/>
-                <Route exact path="/contact" component={Contact}/>
+                {/*<Route exact path="/contact" component={Contact}/>*/}
             </div>
         </Router>
     );

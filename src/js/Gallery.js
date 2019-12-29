@@ -10,14 +10,11 @@ class Gallery extends React.Component {
     render() {
 
         return (
-            <div>
-                <MainNav {...this.props}/>
 
-                <Carousel>
-                    {contents.GalleryPage.images.map(this.createItem)}
-                </Carousel>
+            <Carousel>
+                {contents.GalleryPage.images.map(this.createItem)}
+            </Carousel>
 
-            </div>
         );
     }
 
@@ -28,8 +25,10 @@ class Gallery extends React.Component {
                     className="d-block w-100"
                     src={source.src}
                     alt="Carousel"
-                    height={800}
-                    width={1400}
+                    // height={'100%'}
+                    // width={'100%'}
+                    height={400}
+                    width={'auto'}
                 />
                 <Carousel.Caption>
                     <h3>{source.title}</h3>

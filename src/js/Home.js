@@ -13,6 +13,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import CardColumns from "react-bootstrap/CardColumns";
 import Card from "react-bootstrap/Card";
+import Gallery from "./Gallery";
 
 /**
  * Main page code lives here.
@@ -36,13 +37,8 @@ class Home extends React.Component {
 
                 <Container fluid>
                     {/*first row element is the image*/}
-                    <Row fluid>
-                        <Col fluid>
-                            <Image src={contents.mainPage.topImage} fluid rounded
-                                   style={{
-                                       "height": '400px', "width": "1400px"
-                                   }}/>
-                        </Col>
+                    <Row fluid id={'gallery'}>
+                            <Gallery {...this.props}/>
                     </Row>
 
                     {/*second row element are the next three images*/}
@@ -51,30 +47,28 @@ class Home extends React.Component {
                             <Jumbotron fluid>
                                 <h1>Our Mission</h1>
                                 <p>{contents.mainPage.missionStatement}</p>
-                                <p>
-                                    <ButtonGroup>
-                                        <OverlayTrigger trigger="focus" placement="bottom"
-                                                        overlay={contents.mainPage.facts}>
-                                            <Button variant="primary">Facts Zone</Button>
-                                        </OverlayTrigger>
 
-                                        <OverlayTrigger trigger="focus" placement="bottom"
-                                                        overlay={contents.mainPage.mission}>
-                                            <Button variant="success">Join Our Mission</Button>
-                                        </OverlayTrigger>
-
-                                        <OverlayTrigger trigger="focus" placement="bottom"
-                                                        overlay={contents.mainPage.committee}>
-                                            <Button variant="info">The Chambal Committee</Button>
-                                        </OverlayTrigger>
-                                    </ButtonGroup>
-                                </p>
                                 <Row className={'justify-content-md-center'} fluid>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
                                     <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
                                 </Row>
 
+                            </Jumbotron>
+
+                            <Jumbotron fluid>
+                                <h1>Facts About the Chambal</h1>
+                                {contents.mainPage.facts}
+                            </Jumbotron>
+
+                            <Jumbotron fluid>
+                                <h1>About Us</h1>
+                                {contents.mainPage.mission}
+                            </Jumbotron>
+
+                            <Jumbotron fluid id={'members'}>
+                                <h1>Our Members</h1>
+                                {contents.mainPage.committee}
                             </Jumbotron>
                         </Col>
                     </Row>
@@ -106,7 +100,7 @@ class Home extends React.Component {
     make_card = (data) => {
         console.log('make card called with args ' + JSON.stringify(data));
         return (
-            <Card  className={'text-center'} fluid>
+            <Card  className={'text-center'} fluid id={data.id}>
                 <Card.Header> {data.title} </Card.Header>
                 <Card.Body>
                     {data.content}
