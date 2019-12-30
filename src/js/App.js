@@ -2,10 +2,8 @@ import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import "../css/App.css";
 import Home from "./Home";
-import Gallery from "../js/Gallery";
 import FAQ from "./FAQ";
 import Members from "./members";
-import Contact from "./contact";
 
 function App() {
     return (

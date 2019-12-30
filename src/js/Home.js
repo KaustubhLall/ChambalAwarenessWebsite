@@ -8,12 +8,11 @@ import Image from "react-bootstrap/Image";
 import 'holderjs'
 import Col from "react-bootstrap/Col";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import CardColumns from "react-bootstrap/CardColumns";
 import Card from "react-bootstrap/Card";
 import Gallery from "./Gallery";
+import Contact from "./contact";
+import FAQ from "./FAQ";
 
 /**
  * Main page code lives here.
@@ -38,7 +37,7 @@ class Home extends React.Component {
                 <Container fluid>
                     {/*first row element is the image*/}
                     <Row fluid id={'gallery'}>
-                            <Gallery {...this.props}/>
+                        <Gallery {...this.props}/>
                     </Row>
 
                     {/*second row element are the next three images*/}
@@ -49,26 +48,32 @@ class Home extends React.Component {
                                 <p>{contents.mainPage.missionStatement}</p>
 
                                 <Row className={'justify-content-md-center'} fluid>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[0]} roundedCircle fluid/></Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} roundedCircle fluid/></Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} roundedCircle fluid/></Col>
+                                    <Col fluid>
+                                        <Image src={contents.mainPage.firstImageRowSrc[0]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                               roundedCircle fluid/>
+                                        <Jumbotron fluid>
+                                            <h1>Chambal Facts</h1>
+
+                                            {contents.mainPage.facts}
+                                        </Jumbotron>
+                                    </Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                                      roundedCircle fluid/>
+                                        <Jumbotron fluid>
+                                            <h1>About Us</h1>
+                                            {contents.mainPage.mission}
+                                        </Jumbotron>
+
+                                    </Col>
+                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                                      roundedCircle fluid/>
+                                        <Jumbotron fluid id={'members'}>
+                                            <h1>Our Members</h1>
+                                            {contents.mainPage.committee}
+                                        </Jumbotron>
+                                    </Col>
                                 </Row>
 
-                            </Jumbotron>
-
-                            <Jumbotron fluid>
-                                <h1>Facts About the Chambal</h1>
-                                {contents.mainPage.facts}
-                            </Jumbotron>
-
-                            <Jumbotron fluid>
-                                <h1>About Us</h1>
-                                {contents.mainPage.mission}
-                            </Jumbotron>
-
-                            <Jumbotron fluid id={'members'}>
-                                <h1>Our Members</h1>
-                                {contents.mainPage.committee}
                             </Jumbotron>
                         </Col>
                     </Row>
@@ -76,6 +81,21 @@ class Home extends React.Component {
                     <Row>
                         <Col>{this.getAnnouncements()}</Col>
                     </Row>
+
+
+
+                    <Row fluid id={'contact'}>
+                        <Col>
+                            <Contact {...this.props}/>
+                        </Col>
+                    </Row>
+
+                    <Row fluid id={'contact'}>
+                        <Col>
+                            <FAQ {...this.props}/>
+                        </Col>
+                    </Row>
+
 
                     <Row fluid>
                         <Col fluid>
@@ -100,7 +120,7 @@ class Home extends React.Component {
     make_card = (data) => {
         console.log('make card called with args ' + JSON.stringify(data));
         return (
-            <Card  className={'text-center'} fluid id={data.id}>
+            <Card className={'text-center'} fluid id={data.id}>
                 <Card.Header> {data.title} </Card.Header>
                 <Card.Body>
                     {data.content}

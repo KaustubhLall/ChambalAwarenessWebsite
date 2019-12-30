@@ -1,5 +1,7 @@
 import React from 'react';
-import MainNav from "./mainNavBar";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
 
 class Contact extends React.Component {
@@ -11,11 +13,16 @@ class Contact extends React.Component {
 
     render() {
         return (
-            <div>
-                <MainNav {...this.props}/>
-
-                Contacts
-            </div>
+            <Jumbotron fluid>
+                <Container>
+                    <h1>Contact Us</h1>
+                    <p>
+                        If you think you can help, would like more information, or just want to talk to us, you can reach us here!
+                        <strong>+91 9910031155</strong>. If you would like, you can also email us at
+                    </p>
+                    <Button variant={'success'} href={'mailto:'}> Email Us</Button>
+                </Container>
+            </Jumbotron>
         );
     }
 }

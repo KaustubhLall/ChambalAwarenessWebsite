@@ -16,7 +16,6 @@ class MainNav extends React.Component {
                     <Nav className="mr-auto">
                         <Link to={'home#gallery'}><Nav.Link>Home</Nav.Link> </Link>
                         <Link to={'home#members'}><Nav.Link>Members</Nav.Link></Link>
-                        <Link to={'home#gallery'}><Nav.Link>Gallery</Nav.Link></Link>
 
 
                         <NavDropdown title="Chambal River" id="basic-nav-dropdown">
@@ -31,8 +30,8 @@ class MainNav extends React.Component {
                             <Link to={'home#csr'}><NavDropdown.Item href="#action/3.8">CSR Pitch Decking</NavDropdown.Item></Link>
                         </NavDropdown>
 
-                        <Link to={'home#'}><Nav.Link onClick={() => this.redirectTo('/contact')}>Contact Us</Nav.Link></Link>
-                        <Link to={'home#'}><Nav.Link onClick={() => this.redirectTo('/faq')}>FAQ</Nav.Link></Link>
+                        <Link to={'home#contact'}><Nav.Link>Contact Us</Nav.Link></Link>
+                        <Link to={'home#faq'}><Nav.Link>FAQ</Nav.Link></Link>
 
 
                     </Nav>
