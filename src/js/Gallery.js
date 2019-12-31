@@ -11,7 +11,7 @@ class Gallery extends React.Component {
 
         return (
 
-            <Carousel>
+            <Carousel style={{width: '100%'}}>
                 {contents.GalleryPage.images.map(this.createItem)}
             </Carousel>
 
@@ -25,14 +25,12 @@ class Gallery extends React.Component {
                     className="d-block w-100"
                     src={source.src}
                     alt="Carousel"
-                    // height={'100%'}
-                    // width={'100%'}
                     height={400}
                     width={'auto'}
                 />
                 <Carousel.Caption>
-                    <h3>{source.title}</h3>
-                    <p>{source.desc}</p>
+                    {/*<h3 style={{color: 'red'}}>{source.title}</h3>*/}
+                    {/*<p>{source.desc}</p>*/}
                 </Carousel.Caption>
             </Carousel.Item>
         );

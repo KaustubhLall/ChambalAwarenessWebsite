@@ -19,18 +19,16 @@ class FAQ extends React.Component {
 
     render() {
         return (
-            <Jumbotron fluid>
-                <Container>
-                    <h1>Frequently Asked Questions</h1>
-                    {this.createFAQ()}
-                </Container>
-            </Jumbotron>
+            <Container fluid>
+                <h1>Frequently Asked Questions</h1>
+                {this.createFAQ()}
+            </Container>
         );
     }
 
     createFAQ = () => {
         return (
-            <Container>
+            <Container fluid>
                 {contents.FAQPage.map(this.createCard)}
             </Container>
         );
@@ -40,18 +38,17 @@ class FAQ extends React.Component {
         const elem = (
 
             <Accordion defaultActiveKey={0}>
-                <Card fluid>
-                    <Card.Title>
-                        {data.question}
-                    </Card.Title>
+                <Card style={{width: '100%'}}>
 
                     <Accordion.Toggle as={Button} variant="info" eventKey="1">
-                        See Answer
+                        {data.question}
                     </Accordion.Toggle>
 
-                    <Accordion.Collapse>
+                    <Accordion.Collapse eventKey="1">
                         <Card.Body>
-                            {data.answer}
+                            <p>
+                                {data.answer}
+                            </p>
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>

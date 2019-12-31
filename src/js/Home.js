@@ -51,23 +51,25 @@ class Home extends React.Component {
                                     <Col fluid>
                                         <Image src={contents.mainPage.firstImageRowSrc[0]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
                                                roundedCircle fluid/>
-                                        <Jumbotron fluid>
+                                        <Jumbotron>
                                             <h1>Chambal Facts</h1>
 
                                             {contents.mainPage.facts}
                                         </Jumbotron>
-                                    </Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[1]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
-                                                      roundedCircle fluid/>
-                                        <Jumbotron fluid>
+                                        {/*</Col>*/}
+                                        {/*<Col fluid>*/}
+                                        <Image src={contents.mainPage.firstImageRowSrc[1]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                               roundedCircle fluid/>
+                                        <Jumbotron>
                                             <h1>About Us</h1>
                                             {contents.mainPage.mission}
                                         </Jumbotron>
 
-                                    </Col>
-                                    <Col fluid><Image src={contents.mainPage.firstImageRowSrc[2]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
-                                                      roundedCircle fluid/>
-                                        <Jumbotron fluid id={'members'}>
+                                        {/*</Col>*/}
+                                        {/*<Col fluid>*/}
+                                        <Image src={contents.mainPage.firstImageRowSrc[2]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                               roundedCircle fluid/>
+                                        <Jumbotron id={'members'} style={{paddingBottom:'20%'}}>
                                             <h1>Our Members</h1>
                                             {contents.mainPage.committee}
                                         </Jumbotron>
@@ -78,21 +80,22 @@ class Home extends React.Component {
                         </Col>
                     </Row>
 
-                    <Row>
-                        <Col>{this.getAnnouncements()}</Col>
+                    <Row fluid>
+                        <Col>
+                            <div style={{paddingTop:'10%'}}>{this.getAnnouncements()}</div>
+                        </Col>
                     </Row>
 
 
-
-                    <Row fluid id={'contact'}>
+                    <Row fluid id={'faq'}>
                         <Col>
-                            <Contact {...this.props}/>
+                            <FAQ {...this.props}/>
                         </Col>
                     </Row>
 
                     <Row fluid id={'contact'}>
                         <Col>
-                            <FAQ {...this.props}/>
+                            <Contact {...this.props}/>
                         </Col>
                     </Row>
 
@@ -112,22 +115,25 @@ class Home extends React.Component {
     getAnnouncements = () => {
         return (
             <CardColumns styel={{'align-content': 'center'}}>
-                {contents.mainPage.annoucements.map(this.make_card)}
+                {contents.mainPage.announcements.map(this.makeCard)}
             </CardColumns>
         )
     };
 
-    make_card = (data) => {
+    makeCard = (data) => {
         console.log('make card called with args ' + JSON.stringify(data));
         return (
             <Card className={'text-center'} fluid id={data.id}>
+                {/*<Card.Img variant={'top'} src={"https://picsum.photos/1400/400"}/>*/}
+                <Card.Img variant={'top'} src={data.image}/>
+
                 <Card.Header> {data.title} </Card.Header>
                 <Card.Body>
                     {data.content}
                 </Card.Body>
             </Card>
         );
-    }
+    };
 
 
 }

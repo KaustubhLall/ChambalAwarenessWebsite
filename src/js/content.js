@@ -12,10 +12,15 @@ import Accordion from "react-bootstrap/Accordion";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import * as gallery1 from '../static/gallery1.jpg'
+import * as Gallery2 from '../static/Gallery2.jpg'
+import * as gallery3 from '../static/gallery3.jpg'
+import * as Gallery4 from '../static/gallery4.jpg'
+import * as Gallery5 from '../static/Gallery5.jpg'
 
 const contents = {
-        title: 'IntachKota',
-        favicon_logo_src: "holder.js/30x30",
+        title: 'Chambal Charcha Kota',
+        faviconLogo: "holder.js/30x30",
 
         mainPage: {
             topImage: "https://picsum.photos/1400/400",
@@ -23,7 +28,7 @@ const contents = {
             firstImageRowSrc:
                 [fp1, fp2, fp3],
             ad: ad,
-            annoucements: [
+            announcements: [
                 {
                     title: 'River Issues',
                     id: 'issues',
@@ -35,6 +40,7 @@ const contents = {
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
                 },
                 {
                     title: 'MSWM Condunrum',
@@ -49,6 +55,8 @@ const contents = {
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'Biodiversity',
@@ -62,6 +70,8 @@ const contents = {
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'Tour Packages',
@@ -72,6 +82,8 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'Self Employment Program',
@@ -82,6 +94,8 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'Yearly Awards and Events',
@@ -92,6 +106,8 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'SMART Heritage',
@@ -102,15 +118,20 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
                 {
                     title: 'CSR Pitch Decking',
+                    id: 'csr',
                     content: (
                         <ListGroup className="list-group-flush">
                             <ListGroupItem></ListGroupItem>
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
+                    image: 'holder.js/100px20?random=yes&text=.'
+
                 },
 
             ],
@@ -121,10 +142,8 @@ const contents = {
                         Mhow, western Madhya Pradesh state. From its source it flows north into southeastern Rajasthan state
                         along the Aravalis.
                     </p>
-                    <Accordion.Toggle as={Button} variant="info" eventKey="1">
-                        See All
-                    </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="1">
+
+                    <Accordion.Collapse eventKey="2">
                         <div>
                             <p>
                                 Turning northeast, it flows past Kota and along the Rajasthan–Madhya Pradesh
@@ -143,6 +162,10 @@ const contents = {
                             </p>
                         </div>
                     </Accordion.Collapse>
+
+                    <Accordion.Toggle as={Button} variant="info" eventKey="2">
+                        See All
+                    </Accordion.Toggle>
                 </Accordion>
             ,
 
@@ -152,9 +175,7 @@ const contents = {
                         chapter of INTACH. It is working on preserving the quality of river Chambal and aims to address
                         negative factors which impact the Chambal ecosystem.
                     </p>
-                    <Accordion.Toggle as={Button} variant="info" eventKey="1">
-                        See All
-                    </Accordion.Toggle>
+
                     <Accordion.Collapse eventKey="1">
                         <p>
                             It is also addressing the issues of groundwater
@@ -165,6 +186,9 @@ const contents = {
 
                         </p>
                     </Accordion.Collapse>
+                    <Accordion.Toggle as={Button} variant="info" eventKey="1">
+                        See All
+                    </Accordion.Toggle>
                 </Accordion>
             ),
 
@@ -178,17 +202,16 @@ const contents = {
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:vibhabhatnagar1943@gmail.com'}> Bhat Vibha (RPB) 997-1798-5686 </Button>
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:vivekjain_taxperts@yahoo.in'}> Jain P. C. (Advocate) 941-418-5600</Button>
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> ChmblSena GopalSharma 91 9829089464</Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Hem Lata Gandhi(Susan) 9 9413240629</Button>
+
                                 </ButtonGroup>
                             </Col>
                         </Row>
-                        <Accordion.Toggle as={Button} variant="info" eventKey="1">
-                            See All
-                        </Accordion.Toggle>
+
 
                         <Accordion.Collapse eventKey="1">
                             <ButtonGroup vertical>
                                 {/*todo make a contact card*/}
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Hem Lata Gandhi(Susan) 9 9413240629</Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:kuldeep.lbsgroup@gmail.com'}> Mathur Kuldeep(LBS) 91 9829253001 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:sethinikhilesh@gmail.com'}> Nikhilesh Sethi 91 9829035650 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Prof. G. S. Bhatnagar 91 9829047737 </Button>
@@ -207,73 +230,79 @@ const contents = {
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr SushmaAhuja +91 99280 74780 </Button>
                             </ButtonGroup>
                         </Accordion.Collapse>
+
+                        <Accordion.Toggle as={Button} variant="info" eventKey="1">
+                            See All
+                        </Accordion.Toggle>
+                        <p/>
                     </Container>
                 </Accordion>
             ),
 
 
-        },
-
+        }
+        ,
         FAQPage: [
             {
-                question: loremIpsum({count: 1}),
+                question: loremIpsum({count: 1}) + '?',
                 answer: loremIpsum({count: 6}),
             },
             {
-                question: loremIpsum({count: 1}),
+                question: loremIpsum({count: 1}) + '?',
                 answer: loremIpsum({count: 6}),
             },
             {
-                question: loremIpsum({count: 1}),
+                question: loremIpsum({count: 1}) + '?',
                 answer: loremIpsum({count: 6}),
             },
             {
-                question: loremIpsum({count: 1}),
+                question: loremIpsum({count: 1}) + '?',
                 answer: loremIpsum({count: 6}),
             },
 
         ]
         ,
-
         GalleryPage: {
             images: [
                 {
-                    src: "https://picsum.photos/1400/400",
-                    desc: loremIpsum({count: 3}),
-                    title: loremIpsum()
+                    src: gallery1,
+                    title: 'Bio Diversity',
+                    desc: 'Our planet ecosystem',
                 },
                 {
-                    src: "https://picsum.photos/1400/400",
-                    desc: loremIpsum({count: 3}),
-                    title: loremIpsum()
+                    src: Gallery2,
+                    title: 'Dying aquatic life',
+                    desc: 'Food scarcity',
                 },
                 {
-                    src: "https://picsum.photos/1400/400",
-                    desc: loremIpsum({count: 3}),
-                    title: loremIpsum()
+                    src: gallery3,
+                    title: 'water pollution',
+                    desc: 'Water kills',
                 },
                 {
-                    src: "https://picsum.photos/1400/400",
-                    desc: loremIpsum({count: 3}),
-                    title: loremIpsum()
+                    src: Gallery4,
+                    title: 'Livelihood',
+                    desc: 'Tourism',
                 },
                 {
-                    src: "https://picsum.photos/1400/400",
-                    desc: loremIpsum({count: 3}),
-                    title: loremIpsum()
+                    src: Gallery5,
+                    title: 'events',
+                    desc: 'Updates',
                 },
             ],
 
 
-        }
-        ,
+        },
 
-        ContactUsPage: {}
-        ,
+        contacts: [
+            {
+                name: 'Contact name',
+                number: <strong>+91 1234567890</strong>,
+                email: <Button variant={'outline-secondary'} href={'mailto:'}>email@email.com</Button>,
+            },
 
-        ChambalRiverPage: {}
-        ,
 
+        ]
 
     }
 ;
