@@ -70,7 +70,8 @@ class Home extends React.Component {
                                         <Image src={contents.mainPage.firstImageRowSrc[2]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
                                                roundedCircle fluid/>
                                         <Jumbotron id={'members'} style={{paddingBottom:'20%'}}>
-                                            <h1>Our Members</h1>
+                                            <h1>Our Members </h1>
+                                            <h3>(Click to email)</h3>
                                             {contents.mainPage.committee}
                                         </Jumbotron>
                                     </Col>

@@ -22,8 +22,8 @@ const contents = {
         faviconLogo: "holder.js/30x30",
 
         mainPage: {
-            topImage: "https://picsum.photos/1400/400",
-            missionStatement: 'Our mission is Jal Shakti, ',
+            missionStatement: 'Our mission is Jal Shakti, through a rejuvenated, pollution and chemical free Chambal in the Hadoti Region sustaining the affected populations and ' +
+                'biodiversity of Chambal ecological system including its flora and fauna.',
             firstImageRowSrc:
                 [fp1, fp2, fp3],
             ad: ad,
@@ -170,7 +170,7 @@ const contents = {
 
             mission: (
                 <Accordion>
-                    <p>The Chambal committee is a voluntary organization of citizes of Kota. It is a part of the Kota
+                    <p>The Chambal committee is a voluntary organization of citizens of Kota. It is a part of the Kota
                         chapter of INTACH. It is working on preserving the quality of river Chambal and aims to address
                         negative factors which impact the Chambal ecosystem.
                     </p>
@@ -178,11 +178,10 @@ const contents = {
                     <Accordion.Collapse eventKey="1">
                         <p>
                             It is also addressing the issues of groundwater
-                            pollution viz incesticides, pollutants etc. which affect the quality of water through the 14 waste
+                            pollution viz insecticides, pollutants etc. which affect the quality of water through the 14 waste
                             water drains falling into the river within the city of Kota. The growth of population along the
                             river has its own impact on damaging the natural flora and fauna of the river ecosystem leading to
-                            detirioration of river ecosystem and soil erosion. CSR funding through Pitch Decking.
-
+                            deterioration of river ecosystem and soil erosion mainly through CSR and individual funding (Pitch Decking).
                         </p>
                     </Accordion.Collapse>
                     <Accordion.Toggle as={Button} variant="info" eventKey="1">
@@ -193,15 +192,16 @@ const contents = {
 
 
             committee: (
-                <Accordion defaultActiveKey="0">
+                <Accordion defaultActiveKey="1">
                     <Container>
                         <Row>
                             <Col>
                                 <ButtonGroup vertical>
-                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:vibhabhatnagar1943@gmail.com'}> Bhat Vibha (RPB) 997-1798-5686 </Button>
-                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:vivekjain_taxperts@yahoo.in'}> Jain P. C. (Advocate) 941-418-5600</Button>
-                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> ChmblSena GopalSharma 91 9829089464</Button>
-                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Hem Lata Gandhi(Susan) 9 9413240629</Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:rpbhatnagar2015@gmail.com'}> RP Bhatnagar (Chairman) +91-991-003-1155 / +91-941-370-2055 </Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:vibhabhatnagar1943@gmail.com'}> Anupratan Bhatnagar +91-935-263-3393 </Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:vivekjain_taxperts@yahoo.in'}> P. C. Jain (Advocate) +91-941-418-5600</Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Gopal Sharma +91-982-908-9464</Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Hem Lata Gandhi +91-941-324-0629</Button>
 
                                 </ButtonGroup>
                             </Col>
@@ -210,23 +210,21 @@ const contents = {
 
                         <Accordion.Collapse eventKey="1">
                             <ButtonGroup vertical>
-                                {/*todo make a contact card*/}
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:kuldeep.lbsgroup@gmail.com'}> Mathur Kuldeep(LBS) 91 9829253001 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:sethinikhilesh@gmail.com'}> Nikhilesh Sethi 91 9829035650 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Prof. G. S. Bhatnagar 91 9829047737 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:trea.grmes@gmail.com'}> RearAdmiral(Retd) Vineet Bakshi 91 9823257000 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> SaxenaArun(IIT)BOMBAY 91 8369936626 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:victoriaksingh@googlemail.com'}> Singh Victoria (Dhakarkheri) 91
-                                    9829036384 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Srivastva J. N. (Historian)919461294580 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:Tarumeetsingh@gmail.com'}> Tarumeet Singh Bedi 919828138333</Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> A. H. Zaidi +91 98291 62271</Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Krishendra Sg. Nama +91 94131 29603 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Manu Bhatnagar (NHD) +91 98100 36461 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr. PrahladDubey +91 92516 09368 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> BrijeshVijayvargiya-Press +91 94142 57341 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> SarveshwariRaniwala +91 94141 79858</Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr SushmaAhuja +91 99280 74780 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:kuldeep.lbsgroup@gmail.com'}>Kuldeep Mathur (LBS) +91-982-925-3001 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:sethinikhilesh@gmail.com'}> Nikhilesh Sethi +91-982-903-5650 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Prof. G. S. Bhatnagar +91-982-904-7737 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:trea.grmes@gmail.com'}>  Vineet Bakshi (Rear Admiral Retd) +91-982-325-7000 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Arun Saxena (IIT BOMBAY) +91-836-993-6626 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:victoriaksingh@googlemail.com'}> Victoria Singh (Dhakarkheri) +91-982-903-6384 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Srivastva J. N. (Historian) +91-946-129-4580 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:Tarumeetsingh@gmail.com'}> Tarumeet Singh Bedi +91-982-813-8333</Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> A. H. Zaidi +91-982-916-2271</Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Krishendra Sg. Nama +91-941-312-9603 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Manu Bhatnagar (NHD) +91-981-003-6461 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr. PrahladDubey +91-925-160-9368 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Brijesh Vijayvargiya-Press +91-941-425-7341 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Sarveshwari Raniwala +91-941-417-9858</Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr. Sushma Ahuja +91-992-807-4780 </Button>
                             </ButtonGroup>
                         </Accordion.Collapse>
 
