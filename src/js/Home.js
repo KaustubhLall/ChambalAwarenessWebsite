@@ -44,7 +44,6 @@ class Home extends React.Component {
                     <Row className={'justify-content-md-center'} fluid>
                         <Col>
                             <Jumbotron fluid>
-                                <h1></h1>
 
                                 <Row className={'justify-content-md-center'} fluid>
                                     <Col fluid>
