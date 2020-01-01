@@ -87,7 +87,7 @@ const contents = {
                     image: Gallery1,
                 },
                 {
-                    title: 'Tour Packages',
+                    title: 'Tourism',
                     id: 'packages',
                     content: (
                         <ListGroup className="list-group-flush">
