@@ -77,9 +77,12 @@ const contents = {
                     id: 'biodiversity',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem>Bio diversity 23 index</ListGroupItem>
-                            <ListGroupItem>Vulnerable Mukundera Tiger Reserve</ListGroupItem>
-                            <ListGroupItem>Environmental aberration</ListGroupItem>
+                            <ListGroupItem>Ensuring awareness and assessment of the INTACH 23 point Biodiversity Index under the aegis of INTACH Kota Chapter amongst civil society and
+                                organizations.</ListGroupItem>
+
+                            <ListGroupItem>Assisting government efforts as well as awareness among villagers living in the the Mukundera forests to find sustainable self employment and
+                                not destroy the forest wildlife especially Tigers and the Mukundera Tiger Reserve</ListGroupItem>
+                            <ListGroupItem>Raising awareness on environmental aberration</ListGroupItem>
                             <ListGroupItem>Tree plantation</ListGroupItem>
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
@@ -91,8 +94,10 @@ const contents = {
                     id: 'packages',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem></ListGroupItem>
-                            <ListGroupItem></ListGroupItem>
+                            <ListGroupItem> Eco Tourism Packages for Mukandara Hills</ListGroupItem>
+                            <ListGroupItem> Rock painting weekend Tours</ListGroupItem>
+                            <ListGroupItem> Jain Sacred Land Tours</ListGroupItem>
+                            <ListGroupItem> Mathuradhish and city Temple Tours</ListGroupItem>
                         </ListGroup>
                     ),
                     image: Gallery4,
@@ -102,8 +107,8 @@ const contents = {
                     id: 'sep',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem></ListGroupItem>
-                            <ListGroupItem></ListGroupItem>
+                            <ListGroupItem>Assisting in the creation of self employment opportunities for the population in conjunction with the government by assiting in raising
+                                awareness</ListGroupItem>
                         </ListGroup>
                     ),
                     image: sep,
@@ -114,11 +119,18 @@ const contents = {
                     id: 'awards',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem></ListGroupItem>
-                            <ListGroupItem></ListGroupItem>
+                            <ListGroupItem>Bi- Annual Bird watching event is held in January and July every year</ListGroupItem>
+                            <ListGroupItem>Best Tour Package of the year Award by Chambal Charcha</ListGroupItem>
+                            <ListGroupItem>Annual Best Kitchen Garden Contest</ListGroupItem>
+                            <ListGroupItem>Hadoti Heritage Hero Award</ListGroupItem>
+                            <ListGroupItem>Best Viraasat Clubs in schools</ListGroupItem>
+                            <ListGroupItem>Best Natural Heritge Photos</ListGroupItem>
+                            <ListGroupItem>Best Rock Painting Discovery Award</ListGroupItem>
+                            <ListGroupItem>Best Hadoti Herbal Catalogue Maker</ListGroupItem>
+                            <ListGroupItem>Best CSR funding raisor</ListGroupItem>
+                            <ListGroupItem>Best Biodiversity protection effort</ListGroupItem>
                         </ListGroup>
                     ),
-                    // image: 'holder.js/100px20?random=yes&text=.',
                     image: Gallery5,
 
                 },
@@ -127,8 +139,10 @@ const contents = {
                     id: 'heritage',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem></ListGroupItem>
-                            <ListGroupItem></ListGroupItem>
+                            <ListGroupItem>Supporting a Smart Chambal planning to compliment Smart City Kota</ListGroupItem>
+                            <ListGroupItem>Beautification and cleaning of Chambal Ghats and Temples</ListGroupItem>
+                            <ListGroupItem>Raising awareness of solid waste management and assist govt audit of waste management efforts</ListGroupItem>
+                            <ListGroupItem>Usage of online Kota Smart City Apps like medcords</ListGroupItem>
                         </ListGroup>
                     ),
                     image: smart,
@@ -139,8 +153,7 @@ const contents = {
                     id: 'csr',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem></ListGroupItem>
-                            <ListGroupItem></ListGroupItem>
+                            <ListGroupItem>Working with members, partners and organizations to raise funds</ListGroupItem>
                         </ListGroup>
                     ),
                     image: csr,

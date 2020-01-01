@@ -108,6 +108,7 @@ class Home extends React.Component {
 
                     <Row fluid>
                         <Col fluid>
+                            <h2>Advertisement</h2>
                             <Image src={contents.mainPage.ad} fluid
                                    style={{"height": '100px', "width": "1400px"}}/>
                         </Col>
@@ -130,7 +131,6 @@ class Home extends React.Component {
         // console.log('make card called with args ' + JSON.stringify(data));
         return (
             <Card className={'text-center'} fluid id={data.id}>
-                {/*<Card.Img variant={'top'} src={"https://picsum.photos/1400/400"}/>*/}
                 <Card.Img variant={'top'} src={data.image} style={{maxHeight:'250px'}}/>
 
                 <Card.Header as={'h4'}> {data.title} </Card.Header>

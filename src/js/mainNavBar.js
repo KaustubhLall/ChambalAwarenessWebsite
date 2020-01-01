@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import {HashLink as Link} from 'react-router-hash-link';
+import * as logo from '../static/logo.jpg'
 
 class MainNav extends React.Component {
 
@@ -10,7 +11,16 @@ class MainNav extends React.Component {
     render() {
         const elem = (
             <Navbar bg="light" expand="lg" fixed={'top'}>
-                <Navbar.Brand href={'/home'}>Chambal Charcha Kota</Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <img
+                        alt=""
+                        src={logo}
+                        width="100"
+                        height="50"
+                        // className="d-inline-block align-top"
+                    />{' Chambal Charcha'}
+
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
