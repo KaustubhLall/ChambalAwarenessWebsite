@@ -330,15 +330,7 @@ const contents = {
 
         },
 
-        contacts: [
-            {
-                name: 'Contact name',
-                number: <strong>+91 1234567890</strong>,
-                email: <Button variant={'outline-secondary'} href={'mailto:'}>email@email.com</Button>,
-            },
 
-
-        ]
 
     }
 ;
