@@ -44,11 +44,16 @@ class Home extends React.Component {
                     <Row className={'justify-content-md-center'} fluid>
                         <Col>
                             <Jumbotron fluid>
-                                <h1>Our Mission</h1>
-                                <p>{contents.mainPage.missionStatement}</p>
+                                <h1></h1>
 
                                 <Row className={'justify-content-md-center'} fluid>
                                     <Col fluid>
+                                        <Image src={contents.mainPage.missionImage} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
+                                               roundedCircle fluid/>
+                                        <Jumbotron>
+                                            <h1>Our Mission</h1>
+                                            <p>{contents.mainPage.missionStatement}</p>
+                                        </Jumbotron>
                                         <Image src={contents.mainPage.firstImageRowSrc[0]} style={{height: '100%', width: '100%', maxWidth: '300px', maxHeight: '300px'}}
                                                roundedCircle fluid/>
                                         <Jumbotron>
@@ -126,7 +131,7 @@ class Home extends React.Component {
         return (
             <Card className={'text-center'} fluid id={data.id}>
                 {/*<Card.Img variant={'top'} src={"https://picsum.photos/1400/400"}/>*/}
-                <Card.Img variant={'top'} src={data.image}/>
+                <Card.Img variant={'top'} src={data.image} style={{maxHeight:'250px'}}/>
 
                 <Card.Header as={'h4'}> {data.title} </Card.Header>
                 <Card.Body>

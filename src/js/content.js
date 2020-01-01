@@ -1,8 +1,5 @@
 import React from 'react';
-import * as ad from '../static/ad.PNG'
-import * as fp1 from '../static/fp1.jpeg'
-import * as fp2 from '../static/fp2.jpeg'
-import * as fp3 from '../static/fp3.jpeg'
+
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -11,17 +8,35 @@ import Accordion from "react-bootstrap/Accordion";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import * as gallery1 from '../static/gallery1.jpg'
+
+import * as Gallery1 from '../static/gallery1.jpg'
 import * as Gallery2 from '../static/Gallery2.jpg'
-import * as gallery3 from '../static/gallery3.jpg'
+import * as Gallery3 from '../static/gallery3.jpg'
 import * as Gallery4 from '../static/gallery4.jpg'
 import * as Gallery5 from '../static/Gallery5.jpg'
+
+import * as sep from '../static/sep.jpeg'
+import * as g1 from '../static/g1.jpg'
+import * as g2 from '../static/g2.jpg'
+import * as g3 from '../static/g3.jpg'
+import * as g4 from '../static/g4.jpg'
+import * as g5 from '../static/g5.jpg'
+
+import * as smart from '../static/smart.jpeg'
+import * as csr from '../static/csr.jpeg'
+import * as ad from '../static/ad.PNG'
+
+import * as fp0 from '../static/ms.jpeg'
+import * as fp1 from '../static/fp1.jpeg'
+import * as fp2 from '../static/fp2.jpeg'
+import * as fp3 from '../static/fp3.jpeg'
 
 const contents = {
         title: 'Chambal Charcha Kota',
         faviconLogo: "holder.js/30x30",
 
         mainPage: {
+            missionImage: fp0,
             missionStatement: 'Our mission is Jal Shakti, through a rejuvenated, pollution and chemical free Chambal in the Hadoti Region sustaining the affected populations and ' +
                 'biodiversity of Chambal ecological system including its flora and fauna.',
             firstImageRowSrc:
@@ -33,13 +48,14 @@ const contents = {
                     id: 'issues',
                     content: (
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem>Negative factor of Chambal ecosystem</ListGroupItem>
-                            <ListGroupItem>Groundwater pollution due to insecticides etc</ListGroupItem>
-                            <ListGroupItem>National heritage dangers and prevention</ListGroupItem>
-                            <ListGroupItem>CSR Funding</ListGroupItem>
+                            <ListGroupItem>Negative factors affecting the Chambal ecosystem </ListGroupItem>
+                            <ListGroupItem>Groundwater pollution due to insecticides etc </ListGroupItem>
+                            <ListGroupItem>Maintenance and cleanliness of National heritage monuments and Ghats </ListGroupItem>
+                            <ListGroupItem>Maintenance of natural heritage and Flora and Fauna </ListGroupItem>
+                            <ListGroupItem>Funding partnerships and local CSR funding and ownership by Companies and Coaching Institutes etc.</ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
+                    image: Gallery3,
                 },
                 {
                     title: 'MSWM Condunrum',
@@ -54,8 +70,7 @@ const contents = {
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
-
+                    image: Gallery2,
                 },
                 {
                     title: 'Biodiversity',
@@ -69,8 +84,7 @@ const contents = {
                             <ListGroupItem>CSR Funding</ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
-
+                    image: Gallery1,
                 },
                 {
                     title: 'Tour Packages',
@@ -81,11 +95,10 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
-
+                    image: Gallery4,
                 },
                 {
-                    title: 'Self Employment Program',
+                    title: 'Self Employment',
                     id: 'sep',
                     content: (
                         <ListGroup className="list-group-flush">
@@ -93,7 +106,7 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
+                    image: sep,
 
                 },
                 {
@@ -105,7 +118,8 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
+                    // image: 'holder.js/100px20?random=yes&text=.',
+                    image: Gallery5,
 
                 },
                 {
@@ -117,7 +131,7 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
+                    image: smart,
 
                 },
                 {
@@ -129,7 +143,7 @@ const contents = {
                             <ListGroupItem></ListGroupItem>
                         </ListGroup>
                     ),
-                    image: 'holder.js/100px20?random=yes&text=.'
+                    image: csr,
 
                 },
 
@@ -197,7 +211,8 @@ const contents = {
                         <Row>
                             <Col>
                                 <ButtonGroup vertical>
-                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:rpbhatnagar2015@gmail.com'}> RP Bhatnagar (Chairman) +91-991-003-1155 / +91-941-370-2055 </Button>
+                                    <Button variant='link' size='sm' target={'_blank'} href={'mailto:rpbhatnagar2015@gmail.com'}> RP Bhatnagar (Chairman) +91-991-003-1155 /
+                                        +91-941-370-2055 </Button>
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:vibhabhatnagar1943@gmail.com'}> Anupratan Bhatnagar +91-935-263-3393 </Button>
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:vivekjain_taxperts@yahoo.in'}> P. C. Jain (Advocate) +91-941-418-5600</Button>
                                     <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Gopal Sharma +91-982-908-9464</Button>
@@ -213,9 +228,10 @@ const contents = {
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:kuldeep.lbsgroup@gmail.com'}>Kuldeep Mathur (LBS) +91-982-925-3001 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:sethinikhilesh@gmail.com'}> Nikhilesh Sethi +91-982-903-5650 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Prof. G. S. Bhatnagar +91-982-904-7737 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:trea.grmes@gmail.com'}>  Vineet Bakshi (Rear Admiral Retd) +91-982-325-7000 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:trea.grmes@gmail.com'}> Vineet Bakshi (Rear Admiral Retd) +91-982-325-7000 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Arun Saxena (IIT BOMBAY) +91-836-993-6626 </Button>
-                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:victoriaksingh@googlemail.com'}> Victoria Singh (Dhakarkheri) +91-982-903-6384 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:victoriaksingh@googlemail.com'}> Victoria Singh (Dhakarkheri)
+                                    +91-982-903-6384 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Srivastva J. N. (Historian) +91-946-129-4580 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:Tarumeetsingh@gmail.com'}> Tarumeet Singh Bedi +91-982-813-8333</Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> A. H. Zaidi +91-982-916-2271</Button>
@@ -281,30 +297,21 @@ const contents = {
         GalleryPage: {
             images: [
                 {
-                    src: gallery1,
-                    title: 'Bio Diversity',
-                    desc: 'Our planet ecosystem',
+                    src: g1
                 },
                 {
-                    src: Gallery2,
-                    title: 'Dying aquatic life',
-                    desc: 'Food scarcity',
+                    src: g2
                 },
                 {
-                    src: gallery3,
-                    title: 'water pollution',
-                    desc: 'Water kills',
+                    src: g3
                 },
                 {
-                    src: Gallery4,
-                    title: 'Livelihood',
-                    desc: 'Tourism',
+                    src: g4
                 },
                 {
-                    src: Gallery5,
-                    title: 'events',
-                    desc: 'Updates',
+                    src: g5
                 },
+
             ],
 
 

@@ -24,8 +24,9 @@ class Gallery extends React.Component {
                     className="d-block w-100"
                     src={source.src}
                     alt="Carousel"
-                    height={400}
+                    height={'100%'}
                     width={'auto'}
+                    style={{maxHeight:'600px'}}
                 />
             </Carousel.Item>
         );
