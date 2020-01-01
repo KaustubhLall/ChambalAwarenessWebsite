@@ -1,4 +1,3 @@
-import {loremIpsum} from "lorem-ipsum";
 import React from 'react';
 import * as ad from '../static/ad.PNG'
 import * as fp1 from '../static/fp1.jpeg'
@@ -24,7 +23,7 @@ const contents = {
 
         mainPage: {
             topImage: "https://picsum.photos/1400/400",
-            missionStatement: 'Our mission is Jal Shakti, arising out of chambal river in Hadoti Region, Kota city.',
+            missionStatement: 'Our mission is Jal Shakti, ',
             firstImageRowSrc:
                 [fp1, fp2, fp3],
             ad: ad,
@@ -244,21 +243,39 @@ const contents = {
         ,
         FAQPage: [
             {
-                question: loremIpsum({count: 1}) + '?',
-                answer: loremIpsum({count: 6}),
+                question: 'How can I join the Chambal Charcha campaign?',
+                answer: 'You can join the campaign by contacting any of the members and enrolling with them.',
             },
             {
-                question: loremIpsum({count: 1}) + '?',
-                answer: loremIpsum({count: 6}),
+                question: 'How do I join "Jivit Nadi" and "Samudra Mitra" schemes within Kota city?',
+                answer: 'You can join the campaign by contacting RP Bhatnagar (CCC) or any other member.',
+
             },
             {
-                question: loremIpsum({count: 1}) + '?',
-                answer: loremIpsum({count: 6}),
+                question: 'In what way can this campaign help government schemes of "Atal Yojna" and similar efforts?',
+                answer: 'This campaign shall be at the grassroots/village level helping the macroschemes above.',
+
             },
             {
-                question: loremIpsum({count: 1}) + '?',
-                answer: loremIpsum({count: 6}),
+                question: 'What will the test for water cleanliness be?',
+                answer: 'The water cleanliness shall be on the before/after model of water via biochemical method i.e. water as it is, and after cleaning.',
             },
+            {
+                question: 'How will communication between me and website/you be improved?',
+                answer: 'The awareness of the problem and motivation to solve it shall be the improvement criterion.',
+            },
+            {
+                question: 'Which schools have formed the Virasat clubs under INTACH?',
+                answer: 'Bakshi schools Kota, Lal Bahadur Shashtri Schools Kota and RAC School Kota.',
+            },
+            {
+                question: 'How will the beautification of Chambal and smart city Kota be affected by this campaign?',
+                answer: 'Beautification and smart city on sustainable basis shall be a continuous process and will be implemented with the help of UIT Kota/Collector/Commissioner/INTACH Kota.',
+            },
+            {
+                question: 'What are the 23 parameters of biodiversity by INTACH and how will the trees be maintained?',
+                answer: 'The trees will be maintained via app treelogger and on Haridwar Forest department method of people giving money to maintain a particular tree on family events.',
+            }
 
         ]
         ,

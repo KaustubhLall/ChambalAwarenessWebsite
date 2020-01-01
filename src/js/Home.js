@@ -121,7 +121,7 @@ class Home extends React.Component {
     };
 
     makeCard = (data) => {
-        console.log('make card called with args ' + JSON.stringify(data));
+        // console.log('make card called with args ' + JSON.stringify(data));
         return (
             <Card className={'text-center'} fluid id={data.id}>
                 {/*<Card.Img variant={'top'} src={"https://picsum.photos/1400/400"}/>*/}
