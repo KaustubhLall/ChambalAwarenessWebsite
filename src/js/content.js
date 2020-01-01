@@ -192,7 +192,7 @@ const contents = {
 
 
             committee: (
-                <Accordion defaultActiveKey="1">
+                <Accordion defaultActiveKey="0">
                     <Container>
                         <Row>
                             <Col>
@@ -225,6 +225,7 @@ const contents = {
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Brijesh Vijayvargiya-Press +91-941-425-7341 </Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Sarveshwari Raniwala +91-941-417-9858</Button>
                                 <Button variant='link' size='sm' target={'_blank'} href={'mailto:blank'}> Dr. Sushma Ahuja +91-992-807-4780 </Button>
+                                <Button variant='link' size='sm' target={'_blank'} href={'mailto:susan@taaindia.org'}> Dr. Susan Raj +91-707-304-4452 </Button>
                             </ButtonGroup>
                         </Accordion.Collapse>
 

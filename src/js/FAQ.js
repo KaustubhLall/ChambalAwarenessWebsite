@@ -9,11 +9,6 @@ import contents from "./content";
 
 
 class FAQ extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.setState(props);
-    }
 
     render() {
         return (

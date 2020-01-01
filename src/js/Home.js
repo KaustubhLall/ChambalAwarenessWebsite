@@ -128,7 +128,7 @@ class Home extends React.Component {
                 {/*<Card.Img variant={'top'} src={"https://picsum.photos/1400/400"}/>*/}
                 <Card.Img variant={'top'} src={data.image}/>
 
-                <Card.Header> {data.title} </Card.Header>
+                <Card.Header as={'h4'}> {data.title} </Card.Header>
                 <Card.Body>
                     {data.content}
                 </Card.Body>

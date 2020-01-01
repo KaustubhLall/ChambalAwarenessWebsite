@@ -5,11 +5,7 @@ import Button from "react-bootstrap/Button";
 
 
 class Contact extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.setState(props);
-    }
 
     render() {
         return (
